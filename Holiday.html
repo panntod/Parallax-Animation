@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Holiday</title>
+</head>
+
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .banner {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .container {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        background: radial-gradient(#9cdcff, #1cafff);
+
+    }
+
+    .container #scene {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    .container #scene #text {
+        position: absolute;
+        display: flex !important;
+        position: relative;
+        color: #ffffff;
+        font-size: 14vw;
+        z-index: 100;
+    }
+
+    .container #scene #text span {
+        position: relative !important;
+        display: inline-block;
+        text-shadow: 1px 1px 0 #e1e1e1,
+            2px 2px 0 #e1e1e1,
+            3px 3px 0 #e1e1e1,
+            4px 4px 0 #e1e1e1,
+            5px 5px 0 #e1e1e1,
+            6px 6px 0 #e1e1e1,
+            7px 7px 0 #e1e1e1,
+            8px 8px 0 #e1e1e1,
+            25px 35px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    .layer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .layer img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .top {
+        z-index: 101;
+    }
+</style>
+
+<body>
+    <section class="banner">
+        <div class="container">
+            <div id="scene">
+                <h2 id="text">
+                    <span data-depth-y="1">N</span>
+                    <span data-depth-y="3">e</span>
+                    <span data-depth-y="5">x</span>
+                    <span data-depth-y="7">t</span>
+                    <span data-depth-y="-7">D</span>
+                    <span data-depth-y="-5">a</span>
+                    <span data-depth-y="-3">t</span>
+                    <span data-depth-y="-1">a</span>
+                </h2>
+                <div class="layer top" data-depth="-0.25">
+                    <img src="./assets/img1.svg" alt="background">
+                </div>
+                <div class="layer" data-depth="-1">
+                    <img src="./assets/img2.svg" alt="background">
+                </div>
+                <div class="layer" data-depth=".625">
+                    <img src="./assets/img3.svg" alt="background">
+                </div>
+                <div class="layer" data-depth=".25">
+                    <img src="./assets/img4.svg" alt="background">
+                </div>
+                <div class="layer top" data-depth="-.35">
+                    <img src="./assets/img5.svg" alt="background">
+                </div>
+                <div class="layer top" data-depth=".5">
+                    <img src="./assets/img6.svg" alt="background">
+                </div>
+                <div class="layer top" data-depth=".35">
+                    <img src="./assets/img7.svg" alt="background">
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+    <script>
+        var text = document.getElementById('text');
+        var parallaxInstance = new Parallax(text);
+        var scene = document.getElementById('scene');
+        var parallaxInstance = new Parallax(scene);
+    </script>
+</body>
+
+</html>
